@@ -33,10 +33,10 @@ def load_zipcode(zipcode):
 
 data = load_data()
 
-all_zipcodes = list(set(
-	reduce(lambda a,b: a+b, 
-		[list(d['perZip'].keys()) for d in data], [])
-))
+all_zipcodes = list(set([
+	zcode for d in data
+	for zcode in list(d['perZip'].keys())
+]))
 
 
 
