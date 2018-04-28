@@ -24,7 +24,7 @@ def load_zipcode(zipcode):
 	return sorted([
 		dict(
 			cuisine=d['cuisine'],
-			total=d['perZip'].get(zipcode)
+			total=d['perZip'].get(zipcode, 0)
 		)
 		for d in data
 	], key=lambda d: d['total'], reverse=True)
