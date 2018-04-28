@@ -1,6 +1,5 @@
 import json
 import requests
-import numpy as np
 from flask import Flask
 from flask import request, render_template, jsonify, make_response
 
