@@ -12,7 +12,7 @@
   "encoding": {
     "color": {
       "condition": {
-        "test": "(indexof(lower(datum.cuisine), search.term)>=0) || (highlight._vgsid_==datum._vgsid_)",
+        "test": "(highlight._vgsid_==datum._vgsid_)",
         "value": "SteelBlue"
       },
       "value": "LightGrey"
@@ -40,17 +40,6 @@
   "selection": {
     "highlight": {
       "empty": "none",
-      "on": "mouseover",
-      "type": "single"
-    },
-    "search": {
-      "bind": {
-        "input": "input"
-      },
-      "empty": "none",
-      "fields": [
-        "term"
-      ],
       "on": "mouseover",
       "type": "single"
     }
